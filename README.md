@@ -13,15 +13,15 @@ This repository contains a PyTorch reimplementation of [CycleGAN](https://arxiv.
 
 With pip:
 ```bash
-$ git clone https://github.com/charlesoblack/cyclegan
-$ cd cyclegan/
+$ git clone https://github.com/rossbern/human2anime.git
+$ cd human2anime/
 $ pip3 install -r requirements.txt
 ```
 
 With conda:
 ```bash
-$ git clone https://github.com/charlesoblack/cyclegan
-$ cd cyclegan/
+$ git clone https://github.com/rossbern/human2anime.git
+$ cd human2anime/
 $ conda env create -f environment.yml
 $ conda activate cyclegan
 ```
