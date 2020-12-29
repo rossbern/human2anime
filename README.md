@@ -23,7 +23,7 @@ With conda:
 $ git clone https://github.com/rossbern/human2anime.git
 $ cd human2anime/
 $ conda env create -f environment.yml
-$ conda activate cyclegan
+$ conda activate human2anime
 ```
 
 ### Dataset
