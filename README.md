@@ -1,11 +1,11 @@
-# CycleGAN for Human to Anime Face Generation
+# Human to Anime Face Generation with CycleGAN
 
 <p align="left">
     <img src="images/banner.png" width="600">
 </p>
     
 ### Overview
-This repository contains a PyTorch reimplementation of [CycleGAN](https://arxiv.org/abs/1703.10593), and was used to transform human faces into anime faces.
+This repository contains a PyTorch implementation of CycleGAN [(Zhu et al., 2017)](https://arxiv.org/abs/1703.10593), and was trained to transform human faces into anime faces and vice versa.
 
 ### Installation
 
