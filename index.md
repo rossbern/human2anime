@@ -5,7 +5,7 @@
 </p>
     
 ### Overview
-This repository contains a PyTorch implementation of CycleGAN [(Zhu et al., 2017)](https://arxiv.org/abs/1703.10593), and was trained to transform human faces into anime faces and vice versa.
+This repository contains a PyTorch implementation of CycleGAN [(Zhu et al., 2017)](https://arxiv.org/abs/1703.10593), and was trained to transform human faces into anime faces and vice versa. A research paper accompanying this project can be found in the repo. 
 
 ### Installation
 
