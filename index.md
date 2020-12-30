@@ -1,7 +1,7 @@
 # CycleGAN for Human to Anime Face Generation
 
 <p align="left">
-    <img src="rossbern/human2anime/master/images/banner.png" width="600">
+    <img src="images/banner.png" width="600">
 </p>
     
 ### Overview
