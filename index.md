@@ -1,7 +1,7 @@
 # Human to Anime Face Generation with CycleGAN
 
-<p align="left">
-    <img src="images/banner.png" width="600">
+<p align="center">
+    <img src="images/banner.png" width="1000">
 </p>
     
 ### Overview
