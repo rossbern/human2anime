@@ -1,4 +1,4 @@
-# CycleGAN for Human to Anime Face Generation
+# Human to Anime Face Generation with CycleGAN
 
 <p align="left">
     <img src="images/banner.png" width="600">
