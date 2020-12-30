@@ -1,37 +1,67 @@
-## Welcome to GitHub Pages
+# CycleGAN for Human to Anime Face Generation
 
-You can use the [editor on GitHub](https://github.com/rossbern/human2anime/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<p align="left">
+    <img src="images/banner.png" width="600">
+</p>
+    
+### Overview
+This repository contains a PyTorch reimplementation of [CycleGAN](https://arxiv.org/abs/1703.10593), and was used to transform human faces into anime faces.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Installation
 
-### Markdown
+#### Clone and install
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+With pip:
+```bash
+$ git clone https://github.com/rossbern/human2anime.git
+$ cd human2anime/
+$ pip3 install -r requirements.txt
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+With conda:
+```bash
+$ git clone https://github.com/rossbern/human2anime.git
+$ cd human2anime/
+$ conda env create -f environment.yml
+$ conda activate human2anime
+```
 
-### Jekyll Themes
+### Dataset
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rossbern/human2anime/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+The datasets used by this project consisted of human faces and anime faces. The human faces come from the [Real and Fake Face Detection dataset](https://www.kaggle.com/ciplab/real-and-fake-face-detection)(only the real faces were used). The anime faces were compiled by Mckinsey666 and can be found [here](https://github.com/bchao1/Anime-Face-Dataset).
 
-### Support or Contact
+#### Setup data directory
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+The dataset directory should be structured as follows:
+
+    ├── datasets                   
+    |   ├── <dataset_name>         # i.e. human2anime
+    |   |   ├── train              # Training
+    |   |   |   ├── A              # Contains domain A images (i.e. human faces)
+    |   |   |   └── B              # Contains domain B images (i.e. anime faces)
+    |   |   └── test               # Testing
+    |   |   |   ├── A              # Contains domain A images (i.e. human faces)
+    |   |   |   └── B              # Contains domain B images (i.e. anime faces)
+
+### Train Example
+
+```bash
+$ cd src/
+$ python3 train.py --dataset human2anime --name experiment1
+```
+
+#### Loading pre-trained weights or resuming training
+
+If you want to load pre-trained weights or resume from a checkpoint, simply add the epoch to resume from:
+
+```bash
+# Example: human2anime dataset, experiment1 for epoch 100
+$ python3 train.py --dataset human2anime --name experiment1 --starting-epoch 100
+```
+
+### Test Example
+
+```bash
+$ cd src/
+$ python3 test.py --dataset human2anime --name experiment1
+```
